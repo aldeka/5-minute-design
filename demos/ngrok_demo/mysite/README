@@ -1,0 +1,6 @@
+This is the Django (mysite.polls) tutorial.
+
+The DB has a superuser with username admin, password admin.
+
+Thanks to:
+http://tony.abou-assaleh.net/web-development/stripped-down-django-tutorial

@@ -1,0 +1,97 @@
+2014-04-05 14:26:39,889 - root - INFO - SMTPReceiver started on localhost:8823.
+2014-04-05 14:27:38,388 - root - DEBUG - Message received from Peer: ('127.0.0.1', 56589), From: 'me@mydomain.com', to To ['test@test.com'].
+2014-04-05 14:27:38,392 - routing - DEBUG - Matched 'test@test.com' against START.
+2014-04-05 14:27:38,392 - routing - DEBUG - Message to set(['test@test.com']) was handled by app.handlers.sample.START
+2014-04-05 14:27:38,392 - routing - DEBUG - Matched 'test@test.com' against FORWARD.
+2014-04-05 14:27:38,463 - routing - DEBUG - Message to set(['test@test.com']) was handled by app.handlers.sample.FORWARD
+2014-04-05 14:29:39,753 - root - ERROR - Traceback (most recent call last):
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+gaierror: [Errno -9] Address family for hostname not supported
+
+2014-04-05 14:29:59,398 - root - ERROR - Traceback (most recent call last):
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+gaierror: [Errno -9] Address family for hostname not supported
+
+2014-04-05 14:31:38,431 - root - ERROR - Traceback (most recent call last):
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+gaierror: [Errno -2] Name or service not known
+
+2014-04-05 14:33:15,170 - root - ERROR - Traceback (most recent call last):
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+gaierror: [Errno -2] Name or service not known
+
+2014-04-05 14:45:12,057 - root - ERROR - Traceback (most recent call last):
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+gaierror: [Errno -2] Name or service not known
+
+2014-04-05 14:46:36,844 - root - ERROR - Traceback (most recent call last):
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+gaierror: [Errno -2] Name or service not known
+
+2014-04-05 15:13:40,751 - root - INFO - SMTPReceiver started on localhost:8823.
+2014-04-05 15:14:31,411 - root - DEBUG - Message received from Peer: ('127.0.0.1', 57189), From: 'asheesh@asheesh.org', to To ['test@debdev.xvm.mit.edu'].
+2014-04-05 15:14:31,680 - routing - DEBUG - Matched 'test@debdev.xvm.mit.edu' against START.
+2014-04-05 15:14:31,680 - routing - DEBUG - Message to set(['test@debdev.xvm.mit.edu']) was handled by app.handlers.sample.START
+2014-04-05 15:14:31,680 - routing - DEBUG - Matched 'test@debdev.xvm.mit.edu' against FORWARD.
+2014-04-05 15:14:31,857 - routing - DEBUG - Message to set(['test@debdev.xvm.mit.edu']) was handled by app.handlers.sample.FORWARD
+2014-04-05 15:19:30,963 - root - DEBUG - Message received from Peer: ('127.0.0.1', 57191), From: 'asheesh@asheesh.org', to To ['rofl@debdev.xvm.mit.edu'].
+2014-04-05 15:19:30,965 - routing - DEBUG - Matched 'rofl@debdev.xvm.mit.edu' against NEW_USER.
+2014-04-05 15:19:30,965 - routing - DEBUG - Message to set(['rofl@debdev.xvm.mit.edu']) was handled by app.handlers.sample.NEW_USER
+2014-04-05 15:19:30,965 - routing - DEBUG - Matched 'rofl@debdev.xvm.mit.edu' against FORWARD.
+2014-04-05 15:19:31,021 - routing - DEBUG - Message to set(['rofl@debdev.xvm.mit.edu']) was handled by app.handlers.sample.FORWARD
+2014-04-05 15:21:15,339 - root - DEBUG - Message received from Peer: ('127.0.0.1', 57222), From: 'asheesh@asheesh.org', to To ['ok@debdev.xvm.mit.edu'].
+2014-04-05 15:21:15,341 - routing - DEBUG - Matched 'ok@debdev.xvm.mit.edu' against NEW_USER.
+2014-04-05 15:21:15,341 - routing - DEBUG - Message to set(['ok@debdev.xvm.mit.edu']) was handled by app.handlers.sample.NEW_USER
+2014-04-05 15:21:15,342 - routing - DEBUG - Matched 'ok@debdev.xvm.mit.edu' against FORWARD.
+2014-04-05 15:21:15,410 - routing - DEBUG - Message to set(['ok@debdev.xvm.mit.edu']) was handled by app.handlers.sample.FORWARD
+2014-04-05 17:45:38,441 - root - DEBUG - Message received from Peer: ('127.0.0.1', 58152), From: 'asheesh@asheesh.org', to To ['pycon@pycon.no-ip.biz'].
+2014-04-05 17:45:38,443 - routing - DEBUG - Matched 'pycon@pycon.no-ip.biz' against NEW_USER.
+2014-04-05 17:45:38,443 - routing - DEBUG - Message to set(['pycon@pycon.no-ip.biz']) was handled by app.handlers.sample.NEW_USER
+2014-04-05 17:45:38,443 - routing - DEBUG - Matched 'pycon@pycon.no-ip.biz' against FORWARD.
+2014-04-05 17:45:38,504 - routing - DEBUG - Message to set(['pycon@pycon.no-ip.biz']) was handled by app.handlers.sample.FORWARD
+2014-04-05 17:49:19,743 - root - DEBUG - Message received from Peer: ('127.0.0.1', 58157), From: 'asheesh@asheesh.org', to To ['more@pycon.no-ip.biz'].
+2014-04-05 17:49:19,745 - routing - DEBUG - Matched 'more@pycon.no-ip.biz' against NEW_USER.
+2014-04-05 17:49:19,745 - routing - DEBUG - Message to set(['more@pycon.no-ip.biz']) was handled by app.handlers.sample.NEW_USER
+2014-04-05 17:49:19,745 - routing - DEBUG - Matched 'more@pycon.no-ip.biz' against FORWARD.
+2014-04-05 17:49:19,841 - routing - DEBUG - Message to set(['more@pycon.no-ip.biz']) was handled by app.handlers.sample.FORWARD
+2014-04-06 10:13:39,626 - root - INFO - SMTPReceiver started on localhost:8823.
+2014-04-06 10:13:59,413 - root - DEBUG - Message received from Peer: ('127.0.0.1', 45911), From: 'asheesh@asheesh.org', to To ['testing@pycon.duckdns.org'].
+2014-04-06 10:13:59,418 - routing - DEBUG - Matched 'testing@pycon.duckdns.org' against START.
+2014-04-06 10:13:59,418 - routing - DEBUG - Message to set(['testing@pycon.duckdns.org']) was handled by app.handlers.sample.START
+2014-04-06 10:13:59,419 - routing - DEBUG - Matched 'testing@pycon.duckdns.org' against FORWARD.
+2014-04-06 10:13:59,483 - routing - DEBUG - Message to set(['testing@pycon.duckdns.org']) was handled by app.handlers.sample.FORWARD
+2014-04-06 10:17:48,571 - root - DEBUG - Message received from Peer: ('127.0.0.1', 45933), From: 'asheesh@eventbrite.com', to To ['asheesh@pycon.duckdns.org'].
+2014-04-06 10:17:48,575 - routing - DEBUG - Matched 'asheesh@pycon.duckdns.org' against START.
+2014-04-06 10:17:48,575 - routing - DEBUG - Message to set(['asheesh@pycon.duckdns.org']) was handled by app.handlers.sample.START
+2014-04-06 10:17:48,575 - routing - DEBUG - Matched 'asheesh@pycon.duckdns.org' against FORWARD.
+2014-04-06 10:17:49,089 - routing - DEBUG - Message to set(['asheesh@pycon.duckdns.org']) was handled by app.handlers.sample.FORWARD

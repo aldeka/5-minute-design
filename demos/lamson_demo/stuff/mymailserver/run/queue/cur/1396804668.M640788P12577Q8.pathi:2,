@@ -1,0 +1,40 @@
+Content-Type: multipart/alternative;
+ boundary="===============7388299500774364466=="
+MIME-Version: 1.0
+Date: Sun, 6 Apr 2014 10:17:45 -0700
+From: Asheesh Laroia <asheesh@eventbrite.com>
+Message-Id: <CAJhuxaxCKcRSfQxoNUFEwC47HBkm7dAgm9-etQtyd+Ua_1381g@mail.gmail.com>
+Received: by mail-lb0-f180.google.com with SMTP id 10so3864774lbg.25
+ for <asheesh@pycon.duckdns.org>; Sun, 06 Apr 2014 10:17:45 -0700 (PDT)
+Subject: Can gmail send mail to my duckdns little guy?
+To: asheesh@pycon.duckdns.org
+X-Gm-Message-State: ALoCoQn40XH91pQrKyfKiB7YrV//7PbgKSkNBdDp1TijPOL2YfazvAopLfD3GUU/yWbCat15jA6P
+X-Google-Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20130820;
+ h=x-gm-message-state:mime-version:date:message-id:subject:from:to
+ :content-type;
+ bh=oIORbR7wGntaYm78TL4djiOQhVQAu+9vvkTA2Zkn8L8=;
+ b=ge51/9Alw1bjf2y4YjzJdLEF0LApXc5weDcM2wC+C6z8i7vb7un2i7PVPgY2HoB04q
+ eV9vf/HCzOJ+ps9tjCQMHQ5jkVipC0CqdtkFIfnfLxfha6w9pGvslMsoX/p+HXy7iEQC
+ dO3hohqpHnmvXlc0KSXfBImcGQ+yNdskHmniTzdn0wn9r1RXbpAiD41Yjk53Agaeft4z
+ sBbmDgdjxpQQlq02lTyf/HIs7czS5q7z+/O6s8a3bj9Jz6iuo6L2fFBK33hu+xptSLHr
+ jYiffzJB3jWYIed8l6AGUqM99YxnKmaYI7KH3iyJmiyN1KTTMxOyKfJzBXi2kc8XCGp6
+ 31Fg==
+X-Received: by 10.112.27.133 with SMTP id t5mr17143171lbg.21.1396804665623;
+ Sun, 06 Apr 2014 10:17:45 -0700 (PDT)
+
+--===============7388299500774364466==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+Just checking.
+
+--===============7388299500774364466==
+Content-Type: text/html; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+
+<div dir="ltr">Just checking.</div>
+
+--===============7388299500774364466==--

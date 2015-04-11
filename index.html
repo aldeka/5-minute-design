@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Quick Design Wins in Five Minutes</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <!--   <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css"> -->
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/my_swiss.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+    <section class="slide">
+      <div class="vcenter">
+        <h1>Quick Design Wins</h1>
+        <h3>in five minutes</h3>
+        <h4>Karen Rustad &#8226; PyCon 2015 &#8226; Montréal, QC</h4>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>Line-height</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/1.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/2.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <br>
+        <code>
+        body {
+          <span class="highlight">line-height: 1.75;</span>
+        }
+        </code><br>
+        <code>
+        h1, h2, h3 {
+          margin: 0;
+        }
+        p {
+          margin-top: 0;
+          margin-bottom: 1.125em;
+        }
+        </code>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>Text width</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/3.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <code>
+          .container {
+            width: 800px;
+            margin: 0 auto;
+          }
+        </code>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <code>
+          .container {
+            width: 800px;
+            <span class="highlight">margin: 0 auto;</span>
+          }
+        </code>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>Contrast</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/3.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/4.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <code>
+          body {
+            font-size: 16px;
+          }
+        </code>
+        <br>
+        <code>
+          h1 {
+            <span class="highlight">font-size: 4em;</span>
+          }
+          h2 {
+            <span class="highlight">font-size: 2em;</span>
+          }
+        </code>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>Fonts<br>&nbsp;</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2><span style="text-decoration: line-through;">Fonts</span><br>Typefaces</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2 style="font-weight: 400;">plain</h2>
+        <h2 style="font-weight: 600;">bold</h2>
+        <h2 style="font-weight: 400; font-style: italic;">italic</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2 style="font-weight: 100;">Thin 100 weight</h2>
+        <h2 style="font-weight: 300;">Book 300 weight</h2>
+        <h2 style="font-weight: 400;">Normal 400 weight</h2>
+        <h2 style="font-weight: 700;">Bold 700 weight</h2>
+        <h2 style="font-weight: 900;">Ultra-bold 900 weight</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter" style="font-style: italic;">
+        <h2 style="font-weight: 100;">Thin 100 weight</h2>
+        <h2 style="font-weight: 300;">Book 300 weight</h2>
+        <h2 style="font-weight: 400;">Normal 400 weight</h2>
+        <h2 style="font-weight: 700;">Bold 700 weight</h2>
+        <h2 style="font-weight: 900;">Ultra-bold 900 weight</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter" style="font-style: italic;">
+        <h2><a href="http://somadesign.ca/demos/better-google-fonts/">http://somadesign.ca/demos/better-google-fonts/</a></h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>Google Fonts:</h2>
+        <img src="img/googlefonts.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/5.png"/>
+      </div>
+    </section>
+
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>Grids</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2><a href="http://getbootstrap.com/getting-started/">Twitter Bootstrap</a> et al</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/red-brick-wall.jpg"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2><a href="http://pesticide.io/">pesticide.io</a></h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/6.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/7.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>Color</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>hue contrast: meh</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>value contrast++</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>black and white is okay</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h2>gentle monochrome is hip</h2>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/7.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <img src="img/8.png"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <code>
+           <span class="highlight">@favColor: #9a3f8a;</span>
+        </code><br>
+        <code>
+          @bgColor:  <span class="highlight">lighten</span>(@favColor, 40%);
+        </code><br>
+        <code>
+          @boldColor:  <span class="highlight">darken</span>(@favColor, 10%);
+        </code>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="vcenter">
+        <h1>Thanks!</h1>
+        <br>
+        <h2>@whoisaldeka</h2>
+
+        <h2><a href="https://github.com/aldeka/5-minute-design">github.com/aldeka/5-minute-design</a> <br>(soon)</h2>
+      </div>
+    </section>
+
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet 
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet 
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet 
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<!-- <script src="extensions/navigation/deck.navigation.js"></script> -->
+<script src="extensions/scale/deck.scale.js"></script>
+<script src="extensions/clone/deck.clone.js"></script>
+        <style type="text/css">
+            body.has-clones .deck-container {background: grey;}
+            body div.notes { display: none; }
+            body.has-clones div.notes { color: white; font-weight: 300; font-size: .9em;display: block; text-shadow: 0 0 4px black; z-index: 2;}
+        </style>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

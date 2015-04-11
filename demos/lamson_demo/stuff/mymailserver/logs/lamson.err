@@ -1,0 +1,340 @@
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<me@mydomain.com>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<test@test.com>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'Content-Type: text/plain; charset="us-ascii"\r\nMIME-Version: 1.0\r\nFrom: me@mydomain.com\r\nSubject: My test\r\nTo: test@test.com\r\nContent-Transfer-Encoding: 7bit\r\n\r\nHi there.\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye
+Traceback (most recent call last):
+  File "/home/paulproteus/dnlds/lamson-demo/bin/lamson", line 7, in <module>
+    args.parse_and_run_command(sys.argv[1:], commands, default_command="help")
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 381, in parse_and_run_command
+    command_module(mod, command, options, cli_options=cli_options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 286, in command_module
+    function(**options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 122, in start_command
+    utils.start_server(pid, FORCE, chroot, chdir, uid, gid, umask, loader, debug)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 114, in start_server
+    settings = settings_loader()
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 121, in <lambda>
+    loader = lambda: utils.import_settings(True, from_dir=os.getcwd(), boot_module=boot)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 34, in import_settings
+    __import__(boot_module, globals(), locals())
+  File "/home/paulproteus/dnlds/lamson-demo/mymailserver/config/boot.py", line 17, in <module>
+    settings.receiver_config['port'])
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/server.py", line 168, in __init__
+    smtpd.SMTPServer.__init__(self, (self.host, self.port), None)
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.gaierror: [Errno -9] Address family for hostname not supported
+Traceback (most recent call last):
+  File "/home/paulproteus/dnlds/lamson-demo/bin/lamson", line 7, in <module>
+    args.parse_and_run_command(sys.argv[1:], commands, default_command="help")
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 381, in parse_and_run_command
+    command_module(mod, command, options, cli_options=cli_options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 286, in command_module
+    function(**options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 122, in start_command
+    utils.start_server(pid, FORCE, chroot, chdir, uid, gid, umask, loader, debug)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 114, in start_server
+    settings = settings_loader()
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 121, in <lambda>
+    loader = lambda: utils.import_settings(True, from_dir=os.getcwd(), boot_module=boot)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 34, in import_settings
+    __import__(boot_module, globals(), locals())
+  File "/home/paulproteus/dnlds/lamson-demo/mymailserver/config/boot.py", line 17, in <module>
+    settings.receiver_config['port'])
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/server.py", line 168, in __init__
+    smtpd.SMTPServer.__init__(self, (self.host, self.port), None)
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.gaierror: [Errno -9] Address family for hostname not supported
+Traceback (most recent call last):
+  File "/home/paulproteus/dnlds/lamson-demo/bin/lamson", line 7, in <module>
+    args.parse_and_run_command(sys.argv[1:], commands, default_command="help")
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 381, in parse_and_run_command
+    command_module(mod, command, options, cli_options=cli_options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 286, in command_module
+    function(**options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 122, in start_command
+    utils.start_server(pid, FORCE, chroot, chdir, uid, gid, umask, loader, debug)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 114, in start_server
+    settings = settings_loader()
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 121, in <lambda>
+    loader = lambda: utils.import_settings(True, from_dir=os.getcwd(), boot_module=boot)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 34, in import_settings
+    __import__(boot_module, globals(), locals())
+  File "/home/paulproteus/dnlds/lamson-demo/mymailserver/config/boot.py", line 17, in <module>
+    settings.receiver_config['port'])
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/server.py", line 168, in __init__
+    smtpd.SMTPServer.__init__(self, (self.host, self.port), None)
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.gaierror: [Errno -2] Name or service not known
+Traceback (most recent call last):
+  File "/home/paulproteus/dnlds/lamson-demo/bin/lamson", line 7, in <module>
+    args.parse_and_run_command(sys.argv[1:], commands, default_command="help")
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 381, in parse_and_run_command
+    command_module(mod, command, options, cli_options=cli_options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 286, in command_module
+    function(**options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 122, in start_command
+    utils.start_server(pid, FORCE, chroot, chdir, uid, gid, umask, loader, debug)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 114, in start_server
+    settings = settings_loader()
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 121, in <lambda>
+    loader = lambda: utils.import_settings(True, from_dir=os.getcwd(), boot_module=boot)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 34, in import_settings
+    __import__(boot_module, globals(), locals())
+  File "/home/paulproteus/dnlds/lamson-demo/mymailserver/config/boot.py", line 17, in <module>
+    settings.receiver_config['port'])
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/server.py", line 168, in __init__
+    smtpd.SMTPServer.__init__(self, (self.host, self.port), None)
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.gaierror: [Errno -2] Name or service not known
+Traceback (most recent call last):
+  File "/home/paulproteus/dnlds/lamson-demo/bin/lamson", line 7, in <module>
+    args.parse_and_run_command(sys.argv[1:], commands, default_command="help")
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 381, in parse_and_run_command
+    command_module(mod, command, options, cli_options=cli_options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 286, in command_module
+    function(**options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 122, in start_command
+    utils.start_server(pid, FORCE, chroot, chdir, uid, gid, umask, loader, debug)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 114, in start_server
+    settings = settings_loader()
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 121, in <lambda>
+    loader = lambda: utils.import_settings(True, from_dir=os.getcwd(), boot_module=boot)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 34, in import_settings
+    __import__(boot_module, globals(), locals())
+  File "/home/paulproteus/dnlds/lamson-demo/mymailserver/config/boot.py", line 17, in <module>
+    settings.receiver_config['port'])
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/server.py", line 168, in __init__
+    smtpd.SMTPServer.__init__(self, (self.host, self.port), None)
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.gaierror: [Errno -2] Name or service not known
+Traceback (most recent call last):
+  File "/home/paulproteus/dnlds/lamson-demo/bin/lamson", line 7, in <module>
+    args.parse_and_run_command(sys.argv[1:], commands, default_command="help")
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 381, in parse_and_run_command
+    command_module(mod, command, options, cli_options=cli_options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/modargs/args.py", line 286, in command_module
+    function(**options)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 122, in start_command
+    utils.start_server(pid, FORCE, chroot, chdir, uid, gid, umask, loader, debug)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 114, in start_server
+    settings = settings_loader()
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/commands.py", line 121, in <lambda>
+    loader = lambda: utils.import_settings(True, from_dir=os.getcwd(), boot_module=boot)
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/utils.py", line 34, in import_settings
+    __import__(boot_module, globals(), locals())
+  File "/home/paulproteus/dnlds/lamson-demo/mymailserver/config/boot.py", line 17, in <module>
+    settings.receiver_config['port'])
+  File "/home/paulproteus/dnlds/lamson-demo/local/lib/python2.7/site-packages/lamson/server.py", line 168, in __init__
+    smtpd.SMTPServer.__init__(self, (self.host, self.port), None)
+  File "/usr/lib/python2.7/smtpd.py", line 285, in __init__
+    self.bind(localaddr)
+  File "/usr/lib/python2.7/asyncore.py", line 342, in bind
+    return self.socket.bind(addr)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+socket.gaierror: [Errno -2] Name or service not known
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<asheesh@asheesh.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<test@debdev.xvm.mit.edu>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'MIME-Version: 1.0\r\nDate: Sat, 5 Apr 2014 18:14:30 -0400 (EDT)\r\nFrom: Asheesh Laroia <asheesh@asheesh.org>\r\nMessage-Id: <alpine.DEB.2.02.1404051814110.2020@rose.makesad.us>\r\nReceived: from localhost (localhost [127.0.0.1])\r\n (using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))\r\n (No client certificate requested)\r\n by rose.makesad.us (Postfix) with ESMTPS id 188ED3FCC70F\r\n for <test@debdev.xvm.mit.edu>; Sat,  5 Apr 2014 18:14:30 -0400 (EDT)\r\nSubject: all aboard\r\nTo: test@debdev.xvm.mit.edu\r\nUser-Agent: Alpine 2.02 (DEB 1266 2009-07-14)\r\nX-Openpgp-Key-Id: 0x70096AD1\r\nContent-Type: text/plain; charset="us-ascii"; format="flowed"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<asheesh@asheesh.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<rofl@debdev.xvm.mit.edu>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'MIME-Version: 1.0\r\nDate: Sat, 5 Apr 2014 18:19:29 -0400 (EDT)\r\nFrom: Asheesh Laroia <asheesh@asheesh.org>\r\nMessage-Id: <alpine.DEB.2.02.1404051819170.26161@rose.makesad.us>\r\nReceived: from localhost (localhost [127.0.0.1])\r\n (using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))\r\n (No client certificate requested)\r\n by rose.makesad.us (Postfix) with ESMTPS id CD0B53FCC70F\r\n for <rofl@debdev.xvm.mit.edu>; Sat,  5 Apr 2014 18:19:29 -0400 (EDT)\r\nSubject: is it wicked\r\nTo: rofl@debdev.xvm.mit.edu\r\nUser-Agent: Alpine 2.02 (DEB 1266 2009-07-14)\r\nX-Openpgp-Key-Id: 0x70096AD1\r\nContent-Type: text/plain; charset="us-ascii"; format="flowed"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nnot to care\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<asheesh@asheesh.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<ok@debdev.xvm.mit.edu>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'MIME-Version: 1.0\r\nDate: Sat, 5 Apr 2014 18:21:14 -0400 (EDT)\r\nFrom: Asheesh Laroia <asheesh@asheesh.org>\r\nMessage-Id: <alpine.DEB.2.02.1404051821080.26161@rose.makesad.us>\r\nReceived: from localhost (localhost [127.0.0.1])\r\n (using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))\r\n (No client certificate requested)\r\n by rose.makesad.us (Postfix) with ESMTPS id 322433FC688B\r\n for <ok@debdev.xvm.mit.edu>; Sat,  5 Apr 2014 18:21:14 -0400 (EDT)\r\nSubject: [MONTASTIC] alert: https://openhatch.org/ (fwd)\r\nTo: ok@debdev.xvm.mit.edu\r\nUser-Agent: Alpine 2.02 (DEB 1266 2009-07-14)\r\nX-Openpgp-Key-Id: 0x70096AD1\r\nContent-Type: text/plain; charset="us-ascii"; format="flowed"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n\r\n\r\n---------- Forwarded message ----------\r\nDate: Sat, 5 Apr 2014 01:57:06\r\nFrom: noreply@montastic.com\r\nTo: asheesh@openhatch.org\r\nSubject: [MONTASTIC] alert: https://openhatch.org/\r\n\r\nWebsite status: alert\r\n\r\nDate: 2014-04-05 01:57:06 -0400\r\nName:\r\nURL:  https://openhatch.org/\r\nStatus code: 28 - Operation timeout. The specified time-out period was reached according to the conditions.\r\n\r\n\r\n----\r\nLogin email:  asheesh@openhatch.org\r\nLogin url: http://www.montastic.com/\r\n\r\nIf you wish to stop monitoring this checkpoint, click here : http://www.montastic.com/me/optout/42775d10a9354c1e5ed1be6ddd6be584-192996-YXNoZWVzaEBvcGVuaGF0Y2gub3Jn%0A\r\n\r\n-- The Montastic Server.\r\n-- Do not reply to this email, I\'m not human, I\'m a computer.\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<asheesh@asheesh.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<pycon@pycon.no-ip.biz>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'MIME-Version: 1.0\r\nDate: Sat, 5 Apr 2014 20:45:36 -0400 (EDT)\r\nFrom: Asheesh Laroia <asheesh@asheesh.org>\r\nMessage-Id: <alpine.DEB.2.02.1404052045280.2020@rose.makesad.us>\r\nReceived: from localhost (localhost [127.0.0.1])\r\n (using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))\r\n (No client certificate requested)\r\n by rose.makesad.us (Postfix) with ESMTPS id A009B3FCC7AE\r\n for <pycon@pycon.no-ip.biz>; Sat,  5 Apr 2014 20:45:36 -0400 (EDT)\r\nSubject: dot bizness\r\nTo: pycon@pycon.no-ip.biz\r\nUser-Agent: Alpine 2.02 (DEB 1266 2009-07-14)\r\nX-Openpgp-Key-Id: 0x70096AD1\r\nContent-Type: text/plain; charset="us-ascii"; format="flowed"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<asheesh@asheesh.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<more@pycon.no-ip.biz>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'MIME-Version: 1.0\r\nDate: Sat, 5 Apr 2014 20:49:18 -0400 (EDT)\r\nFrom: Asheesh Laroia <asheesh@asheesh.org>\r\nMessage-Id: <alpine.DEB.2.02.1404052049120.2020@rose.makesad.us>\r\nReceived: from localhost (localhost [127.0.0.1])\r\n (using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))\r\n (No client certificate requested)\r\n by rose.makesad.us (Postfix) with ESMTPS id ACB673FCC6A9\r\n for <more@pycon.no-ip.biz>; Sat,  5 Apr 2014 20:49:18 -0400 (EDT)\r\nSubject: what about no MX record\r\nTo: more@pycon.no-ip.biz\r\nUser-Agent: Alpine 2.02 (DEB 1266 2009-07-14)\r\nX-Openpgp-Key-Id: 0x70096AD1\r\nContent-Type: text/plain; charset="us-ascii"; format="flowed"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<asheesh@asheesh.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<testing@pycon.duckdns.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'MIME-Version: 1.0\r\nDate: Sun, 6 Apr 2014 13:13:57 -0400 (EDT)\r\nFrom: Asheesh Laroia <asheesh@asheesh.org>\r\nMessage-Id: <alpine.DEB.2.02.1404061313480.2020@rose.makesad.us>\r\nReceived: from localhost (localhost [127.0.0.1])\r\n (using TLSv1 with cipher DHE-RSA-AES256-SHA (256/256 bits))\r\n (No client certificate requested)\r\n by rose.makesad.us (Postfix) with ESMTPS id A65613FCC80B\r\n for <testing@pycon.duckdns.org>; Sun,  6 Apr 2014 13:13:57 -0400 (EDT)\r\nSubject: New ISP, new day\r\nTo: testing@pycon.duckdns.org\r\nUser-Agent: Alpine 2.02 (DEB 1266 2009-07-14)\r\nX-Openpgp-Key-Id: 0x70096AD1\r\nContent-Type: text/plain; charset="us-ascii"; format="flowed"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye
+send: 'ehlo localhost.localdomain\r\n'
+reply: '502 Error: command "EHLO" not implemented\r\n'
+reply: retcode (502); Msg: Error: command "EHLO" not implemented
+send: 'helo localhost.localdomain\r\n'
+reply: '250 localhost.localdomain\r\n'
+reply: retcode (250); Msg: localhost.localdomain
+send: u'mail FROM:<asheesh@eventbrite.com>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: u'rcpt TO:<asheesh@pycon.duckdns.org>\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+send: 'data\r\n'
+reply: '354 End data with <CR><LF>.<CR><LF>\r\n'
+reply: retcode (354); Msg: End data with <CR><LF>.<CR><LF>
+data: (354, 'End data with <CR><LF>.<CR><LF>')
+send: 'Content-Type: multipart/alternative;\r\n boundary="===============8761459321274951861=="\r\nMIME-Version: 1.0\r\nDate: Sun, 6 Apr 2014 10:17:45 -0700\r\nFrom: Asheesh Laroia <asheesh@eventbrite.com>\r\nMessage-Id: <CAJhuxaxCKcRSfQxoNUFEwC47HBkm7dAgm9-etQtyd+Ua_1381g@mail.gmail.com>\r\nReceived: by mail-lb0-f180.google.com with SMTP id 10so3864774lbg.25\r\n for <asheesh@pycon.duckdns.org>; Sun, 06 Apr 2014 10:17:45 -0700 (PDT)\r\nSubject: Can gmail send mail to my duckdns little guy?\r\nTo: asheesh@pycon.duckdns.org\r\nX-Gm-Message-State: ALoCoQn40XH91pQrKyfKiB7YrV//7PbgKSkNBdDp1TijPOL2YfazvAopLfD3GUU/yWbCat15jA6P\r\nX-Google-Dkim-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;\r\n d=1e100.net; s=20130820;\r\n h=x-gm-message-state:mime-version:date:message-id:subject:from:to\r\n :content-type;\r\n bh=oIORbR7wGntaYm78TL4djiOQhVQAu+9vvkTA2Zkn8L8=;\r\n b=ge51/9Alw1bjf2y4YjzJdLEF0LApXc5weDcM2wC+C6z8i7vb7un2i7PVPgY2HoB04q\r\n eV9vf/HCzOJ+ps9tjCQMHQ5jkVipC0CqdtkFIfnfLxfha6w9pGvslMsoX/p+HXy7iEQC\r\n dO3hohqpHnmvXlc0KSXfBImcGQ+yNdskHmniTzdn0wn9r1RXbpAiD41Yjk53Agaeft4z\r\n sBbmDgdjxpQQlq02lTyf/HIs7czS5q7z+/O6s8a3bj9Jz6iuo6L2fFBK33hu+xptSLHr\r\n jYiffzJB3jWYIed8l6AGUqM99YxnKmaYI7KH3iyJmiyN1KTTMxOyKfJzBXi2kc8XCGp6\r\n 31Fg==\r\nX-Received: by 10.112.27.133 with SMTP id t5mr17143171lbg.21.1396804665623;\r\n Sun, 06 Apr 2014 10:17:45 -0700 (PDT)\r\n\r\n--===============8761459321274951861==\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset="us-ascii"\r\nContent-Transfer-Encoding: 7bit\r\n\r\nJust checking.\r\n\r\n--===============8761459321274951861==\r\nMIME-Version: 1.0\r\nContent-Type: text/html; charset="us-ascii"\r\nContent-Transfer-Encoding: 7bit\r\n\r\n<div dir="ltr">Just checking.</div>\r\n\r\n--===============8761459321274951861==--\r\n.\r\n'
+reply: '250 Ok\r\n'
+reply: retcode (250); Msg: Ok
+data: (250, 'Ok')
+send: 'quit\r\n'
+reply: '221 Bye\r\n'
+reply: retcode (221); Msg: Bye

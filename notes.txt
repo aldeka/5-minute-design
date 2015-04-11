@@ -1,0 +1,37 @@
+* line-height
+	The CSS line-height property determines the distance or spacing between the lines of text on the page. In the print world, this property is called leading.
+	default is usually 1.2 (multiplier). depends on font-family -- some are "taller" than others
+	More pleasant to read at 1.5 to 1.8. Try out those values and/or in between ones.
+
+	Readable widths for text.
+
+* difference between h* sizes/text size
+	h1 needs to be *dramatically* bigger than h2. 32px vs 24px defaults? 
+	Probably at least double.
+
+	default text size is 16px. So h2 = 32px and h1 = 64px are not terrible values. (and then the other headers would be between 16 and 32px)
+
+* fonts/typefaces
+  plain, bold, italic -- uh uh.
+  pick one with lot of weights/italics variants
+  default weight is 400 -- but 300 is 'book' weight and often nicer to read
+  don't overdo it with fonts
+  If you use size, weight, slant, and color variations effectively you probably only need one!
+
+* grid
+    twitter bootstrap gives you one that collapses nicely on smaller screens for free, other grid systems out there as well
+    don't bootstrap a brick wall. consistent layouts. when you break a gutter it should be for a reason. 
+    	10/2, 9/3, four 3s or three 4s
+    http://pesticide.io/ -- extension for visualizing box model, makes it more obvious when something breaks the grid
+
+    vertical grid: if you use multiples of a given number for all your text, line-heights, images, and margin/padding, it's easy to have vertical harmony as well as a horizontal grid.
+    	http://ux.mailchimp.com/patterns/typography
+
+* color
+	color theory, whatever
+	complementary/contrasting colors can be energizing, but too much contrast is disorienting
+	and life is anxiety-inducing enough as it is.
+	lots of people in our community are colorblind anyway
+	***value contrast***
+	few things in nature are stark white or stark black -- hip sites'll be #f6f6f6 and #222222 rather than #ffffff and #000000
+	monochrome, or mostly monochrome sites look hip and calm and are easy to implement with variables and CSS preprocessors
