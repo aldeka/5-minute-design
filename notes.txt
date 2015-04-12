@@ -29,7 +29,8 @@
 
 * color
 	color theory, whatever
-	complementary/contrasting colors can be energizing, but too much contrast is disorienting
+	complementary/contrasting colors can be energizing
+	but too much contrast is disorienting
 	and life is anxiety-inducing enough as it is.
 	lots of people in our community are colorblind anyway
 	***value contrast***
